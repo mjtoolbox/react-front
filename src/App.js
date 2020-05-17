@@ -7,15 +7,34 @@ function App() {
     <Router>
       <nav className='navbar navbar-expand-lg navbar-light bg-light static-top'>
         <div className='container'>
-          <ul className='navbar-nav ml-auto'>
-            <li className='nav-item active'></li>
-            <li className='nav-item'></li>
-          </ul>
+          <Link to={'/'} className='navbar-brand'>
+            Registration
+          </Link>
+
+          <div className='collapse navbar-collapse' id='navbarResponsive'>
+            <ul className='navbar-nav ml-auto'>
+              <li className='nav-item active'>
+                <Link to={'/'} className='nav-link'>
+                  Home
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link to={'/manage'} className='nav-link'>
+                  Manage
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link to={'/login'} className='nav-link'>
+                  Login
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
-
       <Switch>
         <Route exact path='/' />
+        <Route exact path='/manage' />
         <Route exact path='/login' />
       </Switch>
     </Router>
