@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Main from './Main';
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
         </div>
       </nav>
       <Switch>
-        <Route exact path='/' />
+        <Route exact path='/' component={Main} />
         <Route exact path='/manage' />
         <Route exact path='/login' />
       </Switch>
