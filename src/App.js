@@ -2,6 +2,11 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Main from './Main';
+import Manage from './Manage';
+import Login from './Login';
+import GuardianList from './components/GuardianList';
+import StudentList from './components/StudentList';
+import TeacherList from './components/TeacherList';
 
 function App() {
   return (
@@ -35,8 +40,11 @@ function App() {
       </nav>
       <Switch>
         <Route exact path='/' component={Main} />
-        <Route exact path='/manage' />
-        <Route exact path='/login' />
+        <Route exact path='/manage' component={Manage} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/guardians' component={GuardianList} />
+        <Route exact path='/students' component={StudentList} />
+        <Route exact path='/teachers' component={TeacherList} />
       </Switch>
     </Router>
   );
